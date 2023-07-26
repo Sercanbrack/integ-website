@@ -22,17 +22,17 @@ const HamburgerMenu = () => {
             className={`nav-menu ${isOpen ? 'block' : 'hidden'} lg:flex flex-row lg:flex-row`}
         >
             <li className="nav-menu-item">
-                <Link href="" className="nav-menu-link block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                <Link href="about" className="nav-menu-link block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                     About
                 </Link>
             </li>
             <li className="nav-menu-item">
-                <Link href="" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                <Link href="previous-work" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                     Previous Work
                 </Link>
             </li>
             <li className="nav-menu-item">
-                <Link href="" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                <Link href="contact" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                     Contact
                 </Link>
             </li>

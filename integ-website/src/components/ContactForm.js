@@ -8,7 +8,7 @@ export default function ContactForm({ onNewContact = f => f }) {
     const [methodProps, resetMethod] = useInput("");
     const [typeProps, resetType] = useInput("");
     const [messageProps, resetMessage] = useInput("");
-    const [fileProps, resetFile] = useState(null);
+    {/*const [fileProps, resetFile] = useState(null)*/};
 
     const submit = event => {
         event.preventDefault();
@@ -19,14 +19,14 @@ export default function ContactForm({ onNewContact = f => f }) {
             methodProps.value,
             typeProps.value,
             messageProps.value,
-            fileProps.value);
+            {/*fileProps.value*/});
         resetName();
         resetEmail();
         resetPhone();
         resetMethod();
         resetType();
         resetMessage();
-        resetFile();
+        {/*resetFile()*/};
     }
 
     return (
@@ -48,16 +48,16 @@ export default function ContactForm({ onNewContact = f => f }) {
             </div>
             <div className='flex flex-col'>
                 <label for="method">Preferred Contact Method&nbsp;</label>
-                <select id="method" className="text-black w-300 p-1">
-                    <option value='' className='text-gray-500' selected disabled hidden>Select</option>
+                <select defaultValue={''} id="method" className="text-black w-300 p-1">
+                    <option value='' className='text-gray-500' disabled hidden>Select</option>
                     <option value='method-email'>Email</option>
                     <option value='method-phone'>Phone</option>
                 </select>
             </div>
             <div className='flex flex-col'>
                 <label for="type">Message Type&nbsp;</label>
-                <select id="type" className="text-black w-300 p-1">
-                    <option value='' className='text-gray-500' selected disabled hidden>Select</option>
+                <select defaultValue={''} id="type" className="text-black w-300 p-1">
+                    <option value='' className='text-gray-500' disabled hidden>Select</option>
                     <option value='business'>Business Inquiry</option>
                     <option value='comment'>Comment</option>
                     <option value='file share'>File Share</option>
@@ -70,10 +70,10 @@ export default function ContactForm({ onNewContact = f => f }) {
                     <small>Your message cannot be changed once sent. Max 500 characters.</small>
                 </div>
             </div>
-            <div>
+            {/*<div>
                 <input id="file" className="text-black max-length" type='file' accept='.pdf'></input>
-            </div>
-            <button class="bg-transparent transition-colors: duration-150 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Send</button>
+            </div>*/}
+            <button onClick={submit} className="bg-transparent transition-colors: duration-150 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Send</button>
         </form>
     )
 }
